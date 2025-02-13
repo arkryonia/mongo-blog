@@ -24,3 +24,13 @@ export const RegisterFormSchema = z
       });
     }
   });
+
+export const ContactFormSchema = z.object({
+  email: z.string().email({ message: "Please enter a valid email" }).trim(),
+  subject: z.string().min(1, { message: "Not be empty" }).trim(),
+  message: z
+    .string()
+    .min(1, { message: "Not be empty" })
+    .min(10, { message: "Be at least 10 characters long" })
+    .trim(),
+});

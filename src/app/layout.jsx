@@ -17,6 +17,9 @@ export default function RootLayout({ children }) {
               <Link className="nav-link" href="/register">
                 Regsiter
               </Link>
+              <Link className="nav-link" href="/contact">
+                Contact
+              </Link>
             </div>
           </nav>
         </header>
